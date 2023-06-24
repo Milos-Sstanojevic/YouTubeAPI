@@ -41,6 +41,7 @@ class Program
 
                 var commentThreadsRequest = youtubeService.CommentThreads.List("snippet");
                 commentThreadsRequest.VideoId = videoId;
+                commentThreadsRequest.MaxResults = 50;
 
                 var commentThreadsResponse = commentThreadsRequest.Execute();
                 var realComments = commentThreadsResponse.Items.Select(item => item.Snippet.TopLevelComment.Snippet.TextOriginal);
