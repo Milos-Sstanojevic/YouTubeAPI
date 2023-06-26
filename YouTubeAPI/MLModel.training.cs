@@ -6,7 +6,6 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.ML.Data;
 using Microsoft.ML.Trainers;
-using Microsoft.ML.Transforms;
 using Microsoft.ML;
 
 namespace YouTubeAPI
@@ -35,12 +34,11 @@ namespace YouTubeAPI
         public static IEstimator<ITransformer> BuildPipeline(MLContext mlContext)
         {
             // Data process configuration with pipeline data transformations
-            var pipeline = mlContext.Transforms.Categorical.OneHotEncoding(@"LoggedIn", @"LoggedIn", outputKind: OneHotEncodingEstimator.OutputKind.Indicator)      
-                                    .Append(mlContext.Transforms.Text.FeaturizeText(inputColumnName:@"SentimentText",outputColumnName:@"SentimentText"))      
-                                    .Append(mlContext.Transforms.Concatenate(@"Features", new []{@"LoggedIn",@"SentimentText"}))      
-                                    .Append(mlContext.Transforms.Conversion.MapValueToKey(outputColumnName:@"Sentiment",inputColumnName:@"Sentiment"))      
+            var pipeline = mlContext.Transforms.Text.FeaturizeText(inputColumnName:@"Text",outputColumnName:@"Text")      
+                                    .Append(mlContext.Transforms.Concatenate(@"Features", new []{@"Text"}))      
+                                    .Append(mlContext.Transforms.Conversion.MapValueToKey(outputColumnName:@"IsToxic",inputColumnName:@"IsToxic"))      
                                     .Append(mlContext.Transforms.NormalizeMinMax(@"Features", @"Features"))      
-                                    .Append(mlContext.MulticlassClassification.Trainers.OneVersusAll(binaryEstimator: mlContext.BinaryClassification.Trainers.LbfgsLogisticRegression(new LbfgsLogisticRegressionBinaryTrainer.Options(){L1Regularization=1F,L2Regularization=1F,LabelColumnName=@"Sentiment",FeatureColumnName=@"Features"}), labelColumnName:@"Sentiment"))      
+                                    .Append(mlContext.MulticlassClassification.Trainers.LbfgsMaximumEntropy(new LbfgsMaximumEntropyMulticlassTrainer.Options(){L1Regularization=1F,L2Regularization=1F,LabelColumnName=@"IsToxic",FeatureColumnName=@"Features"}))      
                                     .Append(mlContext.Transforms.Conversion.MapKeyToValue(outputColumnName:@"PredictedLabel",inputColumnName:@"PredictedLabel"));
 
             return pipeline;

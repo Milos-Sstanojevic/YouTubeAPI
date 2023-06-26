@@ -15,14 +15,50 @@ namespace YouTubeAPI
         #region model input class
         public class ModelInput
         {
-            [ColumnName(@"Sentiment")]
-            public float Sentiment { get; set; }
+            [ColumnName(@"CommentId")]
+            public string CommentId { get; set; }
 
-            [ColumnName(@"SentimentText")]
-            public string SentimentText { get; set; }
+            [ColumnName(@"VideoId")]
+            public string VideoId { get; set; }
 
-            [ColumnName(@"LoggedIn")]
-            public bool LoggedIn { get; set; }
+            [ColumnName(@"Text")]
+            public string Text { get; set; }
+
+            [ColumnName(@"IsToxic")]
+            public string IsToxic { get; set; }
+
+            [ColumnName(@"IsAbusive")]
+            public string IsAbusive { get; set; }
+
+            [ColumnName(@"IsThreat")]
+            public string IsThreat { get; set; }
+
+            [ColumnName(@"IsProvocative")]
+            public string IsProvocative { get; set; }
+
+            [ColumnName(@"IsObscene")]
+            public string IsObscene { get; set; }
+
+            [ColumnName(@"IsHatespeech")]
+            public string IsHatespeech { get; set; }
+
+            [ColumnName(@"IsRacist")]
+            public string IsRacist { get; set; }
+
+            [ColumnName(@"IsNationalist")]
+            public string IsNationalist { get; set; }
+
+            [ColumnName(@"IsSexist")]
+            public string IsSexist { get; set; }
+
+            [ColumnName(@"IsHomophobic")]
+            public string IsHomophobic { get; set; }
+
+            [ColumnName(@"IsReligiousHate")]
+            public string IsReligiousHate { get; set; }
+
+            [ColumnName(@"IsRadicalism")]
+            public string IsRadicalism { get; set; }
 
         }
 
@@ -34,20 +70,56 @@ namespace YouTubeAPI
         #region model output class
         public class ModelOutput
         {
-            [ColumnName(@"Sentiment")]
-            public uint Sentiment { get; set; }
+            [ColumnName(@"CommentId")]
+            public string CommentId { get; set; }
 
-            [ColumnName(@"SentimentText")]
-            public float[] SentimentText { get; set; }
+            [ColumnName(@"VideoId")]
+            public string VideoId { get; set; }
 
-            [ColumnName(@"LoggedIn")]
-            public float[] LoggedIn { get; set; }
+            [ColumnName(@"Text")]
+            public float[] Text { get; set; }
+
+            [ColumnName(@"IsToxic")]
+            public uint IsToxic { get; set; }
+
+            [ColumnName(@"IsAbusive")]
+            public string IsAbusive { get; set; }
+
+            [ColumnName(@"IsThreat")]
+            public string IsThreat { get; set; }
+
+            [ColumnName(@"IsProvocative")]
+            public string IsProvocative { get; set; }
+
+            [ColumnName(@"IsObscene")]
+            public string IsObscene { get; set; }
+
+            [ColumnName(@"IsHatespeech")]
+            public string IsHatespeech { get; set; }
+
+            [ColumnName(@"IsRacist")]
+            public string IsRacist { get; set; }
+
+            [ColumnName(@"IsNationalist")]
+            public string IsNationalist { get; set; }
+
+            [ColumnName(@"IsSexist")]
+            public string IsSexist { get; set; }
+
+            [ColumnName(@"IsHomophobic")]
+            public string IsHomophobic { get; set; }
+
+            [ColumnName(@"IsReligiousHate")]
+            public string IsReligiousHate { get; set; }
+
+            [ColumnName(@"IsRadicalism")]
+            public string IsRadicalism { get; set; }
 
             [ColumnName(@"Features")]
             public float[] Features { get; set; }
 
             [ColumnName(@"PredictedLabel")]
-            public float PredictedLabel { get; set; }
+            public string PredictedLabel { get; set; }
 
             [ColumnName(@"Score")]
             public float[] Score { get; set; }
