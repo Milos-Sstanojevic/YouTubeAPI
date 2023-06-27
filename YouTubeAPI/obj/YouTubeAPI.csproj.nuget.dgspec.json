@@ -44,6 +44,10 @@
               "target": "Package",
               "version": "[1.7.1, )"
             },
+            "Microsoft.ML.FastTree": {
+              "target": "Package",
+              "version": "[1.7.1, )"
+            },
             "Microsoft.ML.LightGbm": {
               "target": "Package",
               "version": "[1.7.1, )"

@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.ML.Data;
+using Microsoft.ML.Trainers.FastTree;
 using Microsoft.ML.Trainers;
 using Microsoft.ML;
 
@@ -37,8 +38,7 @@ namespace YouTubeAPI
             var pipeline = mlContext.Transforms.Text.FeaturizeText(inputColumnName:@"Text",outputColumnName:@"Text")      
                                     .Append(mlContext.Transforms.Concatenate(@"Features", new []{@"Text"}))      
                                     .Append(mlContext.Transforms.Conversion.MapValueToKey(outputColumnName:@"IsToxic",inputColumnName:@"IsToxic"))      
-                                    .Append(mlContext.Transforms.NormalizeMinMax(@"Features", @"Features"))      
-                                    .Append(mlContext.MulticlassClassification.Trainers.LbfgsMaximumEntropy(new LbfgsMaximumEntropyMulticlassTrainer.Options(){L1Regularization=1F,L2Regularization=1F,LabelColumnName=@"IsToxic",FeatureColumnName=@"Features"}))      
+                                    .Append(mlContext.MulticlassClassification.Trainers.OneVersusAll(binaryEstimator:mlContext.BinaryClassification.Trainers.FastForest(new FastForestBinaryTrainer.Options(){NumberOfTrees=4,NumberOfLeaves=4,FeatureFraction=1F,LabelColumnName=@"IsToxic",FeatureColumnName=@"Features"}),labelColumnName:@"IsToxic"))      
                                     .Append(mlContext.Transforms.Conversion.MapKeyToValue(outputColumnName:@"PredictedLabel",inputColumnName:@"PredictedLabel"));
 
             return pipeline;

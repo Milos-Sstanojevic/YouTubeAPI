@@ -49,3 +49,13 @@ C:\Users\Milos\OneDrive\Radna površina\fax\3. godina\sistemsko\api\YouTubeAPI\Y
 C:\Users\Milos\OneDrive\Radna površina\fax\3. godina\sistemsko\api\YouTubeAPI\YouTubeAPI\obj\Debug\net7.0\YouTubeAPI.pdb
 C:\Users\Milos\OneDrive\Radna površina\fax\3. godina\sistemsko\api\YouTubeAPI\YouTubeAPI\obj\Debug\net7.0\YouTubeAPI.genruntimeconfig.cache
 C:\Users\Milos\OneDrive\Radna površina\fax\3. godina\sistemsko\api\YouTubeAPI\YouTubeAPI\obj\Debug\net7.0\ref\YouTubeAPI.dll
+C:\Users\Milos\OneDrive\Radna površina\fax\3. godina\sistemsko\api\YouTubeAPI\YouTubeAPI\bin\Debug\net7.0\Microsoft.ML.FastTree.dll
+C:\Users\Milos\OneDrive\Radna površina\fax\3. godina\sistemsko\api\YouTubeAPI\YouTubeAPI\bin\Debug\net7.0\Microsoft.ML.LightGbm.dll
+C:\Users\Milos\OneDrive\Radna površina\fax\3. godina\sistemsko\api\YouTubeAPI\YouTubeAPI\bin\Debug\net7.0\runtimes\linux-x64\native\lib_lightgbm.so
+C:\Users\Milos\OneDrive\Radna površina\fax\3. godina\sistemsko\api\YouTubeAPI\YouTubeAPI\bin\Debug\net7.0\runtimes\osx-x64\native\lib_lightgbm.dylib
+C:\Users\Milos\OneDrive\Radna površina\fax\3. godina\sistemsko\api\YouTubeAPI\YouTubeAPI\bin\Debug\net7.0\runtimes\win-x64\native\lib_lightgbm.dll
+C:\Users\Milos\OneDrive\Radna površina\fax\3. godina\sistemsko\api\YouTubeAPI\YouTubeAPI\bin\Debug\net7.0\runtimes\win-x64\native\lightgbm.exe
+C:\Users\Milos\OneDrive\Radna površina\fax\3. godina\sistemsko\api\YouTubeAPI\YouTubeAPI\bin\Debug\net7.0\runtimes\linux-x64\native\libFastTreeNative.so
+C:\Users\Milos\OneDrive\Radna površina\fax\3. godina\sistemsko\api\YouTubeAPI\YouTubeAPI\bin\Debug\net7.0\runtimes\osx-x64\native\libFastTreeNative.dylib
+C:\Users\Milos\OneDrive\Radna površina\fax\3. godina\sistemsko\api\YouTubeAPI\YouTubeAPI\bin\Debug\net7.0\runtimes\win-x64\native\FastTreeNative.dll
+C:\Users\Milos\OneDrive\Radna površina\fax\3. godina\sistemsko\api\YouTubeAPI\YouTubeAPI\bin\Debug\net7.0\runtimes\win-x86\native\FastTreeNative.dll

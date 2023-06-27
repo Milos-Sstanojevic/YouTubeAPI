@@ -55,7 +55,7 @@ namespace YouTubeAPI
             public string IsHomophobic { get; set; }
 
             [ColumnName(@"IsReligiousHate")]
-            public string IsReligiousHate { get; set; }
+            public bool IsReligiousHate { get; set; }
 
             [ColumnName(@"IsRadicalism")]
             public string IsRadicalism { get; set; }
@@ -110,7 +110,7 @@ namespace YouTubeAPI
             public string IsHomophobic { get; set; }
 
             [ColumnName(@"IsReligiousHate")]
-            public string IsReligiousHate { get; set; }
+            public bool IsReligiousHate { get; set; }
 
             [ColumnName(@"IsRadicalism")]
             public string IsRadicalism { get; set; }

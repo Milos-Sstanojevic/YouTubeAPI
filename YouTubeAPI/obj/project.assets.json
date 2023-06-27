@@ -228,7 +228,7 @@
           }
         },
         "build": {
-          "build/netstandard2.0/_._": {}
+          "build/netstandard2.0/Microsoft.ML.FastTree.props": {}
         },
         "runtimeTargets": {
           "runtimes/linux-x64/native/libFastTreeNative.so": {
@@ -5826,6 +5826,7 @@
   "projectFileDependencyGroups": {
     "net7.0": [
       "Microsoft.ML >= 1.7.1",
+      "Microsoft.ML.FastTree >= 1.7.1",
       "Microsoft.ML.LightGbm >= 1.7.1"
     ]
   },
@@ -5869,6 +5870,10 @@
         "targetAlias": "net7.0",
         "dependencies": {
           "Microsoft.ML": {
+            "target": "Package",
+            "version": "[1.7.1, )"
+          },
+          "Microsoft.ML.FastTree": {
             "target": "Package",
             "version": "[1.7.1, )"
           },
