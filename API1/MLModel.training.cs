@@ -8,7 +8,7 @@ using Microsoft.ML.Data;
 using Microsoft.ML.Trainers;
 using Microsoft.ML;
 
-namespace YouTubeAPI
+namespace API1
 {
     public partial class MLModel
     {

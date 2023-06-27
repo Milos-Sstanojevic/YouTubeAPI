@@ -9,6 +9,7 @@
       "YouTubeAPI/1.0.0": {
         "dependencies": {
           "Microsoft.ML": "1.7.1",
+          "Microsoft.ML.FastTree": "1.7.1",
           "Microsoft.ML.LightGbm": "1.7.1"
         },
         "runtime": {
