@@ -64,7 +64,7 @@ class Program
 
                     var youtubeService = new YouTubeService(new BaseClientService.Initializer
                     {
-                        ApiKey = "AIzaSyDkZCwTdg6DLlbnHPfRrz17J1KV8CFwuKg"
+                        ApiKey = "OVDE IDE API YOUTUBE KEY"
                     });
 
                     var commentThreadsRequest = youtubeService.CommentThreads.List("snippet");
